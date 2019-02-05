@@ -29,5 +29,4 @@ One of the important implementation strategies of this layer is to decouple it f
  Provides data to the UI and acts as a communication center between the Repository and the UI. Hides the backend from the UI. ViewModel instances survive device configuration changes.
  
  ![image](https://cdn-images-1.medium.com/max/1200/1*uWXunt0A6fKUFU8PsTLkfA.png)
- 
-https://proandroiddev.com/mvvm-architecture-viewmodel-and-livedata-part-1-604f50cda1
+  
