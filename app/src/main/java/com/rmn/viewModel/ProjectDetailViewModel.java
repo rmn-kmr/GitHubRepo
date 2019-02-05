@@ -3,6 +3,9 @@ package com.rmn.viewModel;
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
+import android.arch.lifecycle.ViewModel;
+import android.arch.lifecycle.ViewModelProvider;
+import android.arch.lifecycle.ViewModelProviders;
 import android.support.annotation.NonNull;
 
 import com.rmn.model.Project;
@@ -21,6 +24,23 @@ public class ProjectDetailViewModel extends AndroidViewModel{
 
     public LiveData<Project> getProjectObservable(){
         return projectObservable;
+    }
+
+    public static class ProjectDetailFactoryMethod implements ViewModelProvider.Factory {
+
+        private Application mApplication;
+        private String mRepoId;
+
+        public ProjectDetailFactoryMethod(Application application, String repoId){
+            mApplication = application;
+            mRepoId = repoId;
+        }
+
+        @NonNull
+        @Override
+        public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
+            return (T) new ProjectDetailViewModel(mApplication, mRepoId);
+        }
     }
 
 }

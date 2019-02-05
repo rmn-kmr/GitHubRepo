@@ -14,85 +14,141 @@
         android:text="@string/loading_project"
         android:textAlignment="center" />
 
-    <LinearLayout
-        android:id="@+id/parent"
-        android:visibility="gone"
-        android:layout_marginStart="@dimen/item_horizontal_margin"
-        android:layout_marginEnd="@dimen/item_horizontal_margin"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_vertical|center_horizontal"
-        android:padding="5dp"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:orientation="vertical" >
+        android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="@dimen/logo_width"
-            android:layout_height="@dimen/logo_height"
-            android:src="@drawable/github" />
-
-        <TextView
-            android:id="@+id/name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/project_name"
-            android:textStyle="bold"
-            android:textSize="@dimen/project_header1"
-            android:textAlignment="center"
-            android:paddingBottom="5dp"/>
-
-        <TextView
-            android:id="@+id/project_desc"
+        <LinearLayout
+            android:id="@+id/parent"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/project_description"
-            android:textSize="@dimen/project_header2" />
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/item_horizontal_margin"
+            android:layout_marginStart="@dimen/item_horizontal_margin"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="@dimen/logo_width"
+                android:layout_height="@dimen/logo_height"
+                android:src="@drawable/github" />
+
+            <TextView
+                android:padding="10dp"
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/project_name"
+                android:paddingBottom="5dp"
+                android:textAlignment="center"
+                android:textSize="@dimen/project_header1"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/description" />
+
+            <TextView
+                android:padding="12dp"
+                android:id="@+id/project_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/project_description"
+                android:textSize="@dimen/project_header2" />
 
 
-        <TextView
-            android:id="@+id/languages"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/project_language"
-            android:textSize="@dimen/project_text" />
+            <TextView
+                style="@style/head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/languages" />
 
-        <TextView
-            android:id="@+id/project_watchers"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/project_watchers"
-            android:textSize="@dimen/project_text" />
+            <TextView
+                android:padding="12dp"
+                android:id="@+id/languages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/project_language"
+                android:textSize="@dimen/project_text" />
 
-        <TextView
-            android:id="@+id/project_open_issues"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/open_issues"
-            android:textSize="@dimen/project_text" />
+            <TextView
+                style="@style/head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/project_watchers" />
+
+            <TextView
+                android:padding="12dp"
+                android:id="@+id/project_watchers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/project_watchers"
+                android:textSize="@dimen/project_text" />
 
 
-        <TextView
-            android:id="@+id/project_created_at"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="Created At"
-            android:textSize="@dimen/project_text" />
+            <TextView
+                style="@style/head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/open_issues" />
 
-        <TextView
-            android:id="@+id/project_updated_at"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="Updated At"
-            android:textSize="@dimen/project_text" />
+            <TextView
+                android:padding="12dp"
+                android:id="@+id/project_open_issues"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/open_issues"
+                android:textSize="@dimen/project_text" />
 
-        <TextView
-            android:id="@+id/clone_url"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/open_issues"
-            android:textSize="@dimen/project_text" />
 
-    </LinearLayout>
+            <TextView
+                style="@style/head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/createdat" />
 
+            <TextView
+                android:padding="12dp"
+                android:id="@+id/project_created_at"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="Created At"
+                android:textSize="@dimen/project_text" />
+
+
+            <TextView
+                style="@style/head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/updateat" />
+
+            <TextView
+                android:padding="12dp"
+                android:id="@+id/project_updated_at"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="Updated At"
+                android:textSize="@dimen/project_text" />
+
+            <TextView
+                style="@style/head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/open_issues" />
+
+            <TextView
+                android:padding="12dp"
+                android:id="@+id/clone_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/open_issues"
+                android:textSize="@dimen/project_text" />
+
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>

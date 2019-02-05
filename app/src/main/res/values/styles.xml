@@ -8,4 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="head">
+        <item name="android:padding">10dp</item>
+        <item name="android:background">#7b123456</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
 </resources>

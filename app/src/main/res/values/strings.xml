@@ -20,4 +20,7 @@
     <string name="project_description">Project Description</string>
     <string name="open_issues">Open Issues</string>
     <string name="loading_project">Loading Project ...</string>
+    <string name="description">Description</string>
+    <string name="updateat">Updated At</string>
+    <string name="createdat">Created At</string>
 </resources>
